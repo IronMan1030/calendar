@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+:root {
+  --colorMain: #3a3973;
+  --colorMainAlpha: rgba(58, 57, 115, 0.9);
+  --colorSecondary: #8bc648;
+  --colorBg: #f3f3f6;
+
+  --colorWhite: white;
+  --colorGray: #848793;
+  --colorYellow: #fff055;
+  --colorLightGray: #dddee4;
+  --colorRed: #de615e;
+  text-align: center;
+  --fontMain: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-family: var(--fontMain);
+}
+.bule-btn {
+  background: var(--colorMain) !important;
+  color: var(--colorWhite) !important;
+  padding: 12px !important;
+}
+.bule-btn:disabled {
+  opacity: 0.5;
+  cursor: none;
+}
+/* date button */
+.button.date {
+  border: 2px solid var(--colorLightGray);
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 4px;
+  background: var(--colorLightGray);
+  min-height: 68px;
+}
+.button.date:hover {
+  background: var(--colorBg);
+  border: 2px solid var(--colorMain);
+}
+.button.date.selected {
+  border: 2px solid var(--colorMain);
+  background: var(--colorMain);
+  color: var(--colorWhite);
+}
+.button.date.selected .weekday {
+  color: var(--colorWhite);
+}
+.button.date.selected .first-day {
+  background: var(--colorWhite);
+  color: var(--colorMain);
+}
+.button.date .weekday {
+  font-size: 14px;
+  padding-top: 5px;
+  color: var(--colorGray);
+}
+.button.date .first-day {
+  background: var(--colorRed);
+  color: var(--colorWhite);
+  font-size: 14px;
+  font-weight: 600;
+}
+.button.date .day {
+  padding: 5px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.button.date.more-less {
+  padding-top: 12px;
+  font-weight: 600;
+  background: var(--colorBg);
+  color: var(--colorMain);
+  border: 2px solid var(--colorMain);
+  min-height: 56px;
+}
+.button.date.more-less:hover,
+.button.date.more-less.selected {
+  background: var(--colorMain);
+  color: var(--colorWhite);
+}
+
+/* time button */
+.button.time {
+  border: 2px solid var(--colorLightGray);
+  padding: 8px 10px;
+  cursor: pointer;
+  background: var(--colorLightGray);
+  border-radius: 8px;
+}
+.button.time:hover {
+  border: 2px solid var(--colorMain);
+}
+.button.time.selected {
+  border: 2px solid var(--colorMain);
+  background: var(--colorMain);
+  color: var(--colorWhite);
+}
